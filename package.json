@@ -1,6 +1,6 @@
 {
-  "name": "ngx-flow",
-  "version": "0.0.0",
+  "name": "@flowjs/ngx-flow",
+  "version": "0.6.0",
   "author": {
     "name": "Martin Nuc",
     "email": "martin@nuc.cz"
@@ -10,45 +10,32 @@
     "type": "git",
     "url": "https://github.com/flowjs/ngx-flow"
   },
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build:lib": "ng build ngx-flow",
-    "build:demo": "ng build ngx-flow-demo",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "test:ci": "ng test ngx-flow --watch=false --browsers ChromeHeadless --code-coverage",
-    "server": "node server/app.js"
+  "peerDependencies": {
+    "@angular/common": "^14.0.0-",
+    "@angular/core": "^14.0.0-",
+    "@flowjs/flow.js": "^2.13.0"
   },
-  "private": true,
   "dependencies": {
-    "@angular/animations": "^15.2.9",
-    "@angular/common": "^15.2.9",
-    "@angular/compiler": "^15.2.9",
-    "@angular/core": "^15.2.9",
-    "@angular/forms": "^15.2.9",
-    "@angular/platform-browser": "^15.2.9",
-    "@angular/platform-browser-dynamic": "^15.2.9",
-    "@angular/router": "^15.2.9",
-    "@flowjs/flow.js": "^2.14.1",
-    "rxjs": "^7.6.0",
-    "tslib": "^2.2.0",
-    "zone.js": "^0.13.0"
+    "tslib": "^2.2.0"
   },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "^15.2.8",
-    "@angular/cli": "^15.2.8",
-    "@angular/compiler-cli": "^15.2.9",
-    "@types/flowjs": "2.13.9",
-    "@types/jasmine": "~3.8.0",
-    "@types/node": "18.15.13",
-    "jasmine-core": "~3.8.0",
-    "karma": "~6.3.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.0.3",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "~1.7.0",
-    "ng-packagr": "^15.2.2",
-    "typescript": "4.8.4"
-  }
+  "module": "fesm2015/flowjs-ngx-flow.mjs",
+  "es2020": "fesm2020/flowjs-ngx-flow.mjs",
+  "esm2020": "esm2020/flowjs-ngx-flow.mjs",
+  "fesm2020": "fesm2020/flowjs-ngx-flow.mjs",
+  "fesm2015": "fesm2015/flowjs-ngx-flow.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2020": "./esm2020/flowjs-ngx-flow.mjs",
+      "es2020": "./fesm2020/flowjs-ngx-flow.mjs",
+      "es2015": "./fesm2015/flowjs-ngx-flow.mjs",
+      "node": "./fesm2015/flowjs-ngx-flow.mjs",
+      "default": "./fesm2020/flowjs-ngx-flow.mjs"
+    }
+  },
+  "sideEffects": false
 }
